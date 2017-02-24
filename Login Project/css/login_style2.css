@@ -1,0 +1,165 @@
+body {
+	background-color: #67c5db;
+	font-size: 18px;
+	font-family: "Helvetica-Neue", Helvetica, Arial, sans-serif;
+	line-height: 1em;
+	font-weight: bold;
+}
+
+/* "a" is the anchor tag in hyper text.*/
+
+a, a:active, a:link, a:visited { 
+	color: #fff;
+	font-size: 14px;
+	text-decoration: none;
+} 
+
+
+a:hover { /* "a" here,  decalrs that every single hover instance will behave like this: */
+	color: #dedee0;
+}
+
+.container { /* the entire container is 100% of the user's screen */
+	width: 100%;
+	height: 323px;
+}
+
+.login { /* This dictates the dimensions of the box around the text feilds */
+	border: 2px solid #a1a1a1;
+	box-shadow: inset 0 0 5px #a1a1a1;
+	border-radius: 10px;
+	margin: 10% auto;/* This forces the text-field-box to be 10% from the top, and auto-centered based on whatever 100% of the user's screen is */
+}
+
+.form_header { /* the container that says "please login". */
+	width: 100%;
+	height: 10%;
+	background-color: #dedee0;
+	border-bottom: 2px solid #a1a1a1;
+	text-align: center;
+	padding: 3% 0 0 0;/* This defines how far from the top the text is, top,right,bottom,left. */
+	border-radius: 10px 10px 0 0;/* This defines how rounded the corners are */
+}
+
+/* APPLIES TO EVERY "form" TAG */
+
+form { /* dimensions and style of everything in the "form" tag, ***Under the predefined constraints set in ".container" */
+	background-color: #eff0f2;
+	padding: 5% 5%; /* this tells everything in form to be 5% (from the top, and from the right) away  from the Border of "form_header". */
+	border-radius: 0 0 10px 10px;
+}
+
+/* APPLIES TO EVERY "input" TAG WITH "type" IN IT */
+
+input[type="text"], /* This defines the dimensions of the text fields for "username" and "password". */
+input[type="password"] {
+	outline: none;
+	font-family: caption;
+	border: 4px double #dedee0; /* this just give it a pointless border, with 2 lines instead of one. */
+	padding: 5px;
+	margin: 5% 0 0 0; /* Both text fields should be 5% from the top, 22.5 pixels in this case */
+}
+
+input[type="text"]:focus, /* ".focus" Means, this is what will happen when this is clicked. */
+input[type="password"]:focus { /* The following are some actions or changes that will take place when ".focus" (or when the user clicks on, or interacts with) occurs.  */
+	border: 0 0 5px #000;
+	box-shadow: inset 0 0 10px #a1a1a1;
+}
+
+.btn { /* defines the size of the "login" button */
+	outline: none;
+	color: #a1a1a1;
+	font-weight: bold;
+	margin: 45px;
+	text-align: center;
+	border-radius: 25px;
+	background-color: #dedee0;
+	border: 2px solid #a1a1a1;
+}
+
+.btn:hover {
+	color: #000;
+	background-color: #dedee0;
+	box-shadow: inset 0 0 5px #000;
+}
+
+.rem { /* Defines the "rem" string text. */ 
+	font-size: 12px; /* this breaks from the Parent ".container", and has it's own font size. */
+}
+
+.forgot { /* this sets up a "space" for the ".forgot" class. */
+	width: 100%; /* this means, forgot is centered (on the x-axis) 100% relative to ".login", which is 500 pixels wide in this case. */
+	font-size: 3em; 
+} /* Since the ".forgot" class by itself, doesn't have any content or text of its own (other than the link obviously), nothing else is stated here in terms of style. */
+
+/*==========================================
+	If the screen size is 500px wide or 
+	larger, following styles will be applied.
+ ===========================================*/
+
+ 
+ /* "@media" used to define parameters users using some other device other than a desktop, to view your web content. */
+ 
+@media (min-width:500px) { /* at the minimum width of 500 px, the code is no longer valid. I.E., for a desktop */
+	.login {
+		width: 500px;
+		height: 341px;
+	}
+	input[type="text"],
+	input[type="password"] {
+		width: 430px;
+		font-size: 20px;
+	}
+	.btn {
+		font-size: 20px;
+		width: 125px;
+		height: 50px;
+		margin: 45px 0 0 110px;
+	}
+	.forget a {
+		margin: 0 0 0 35%;
+	}
+	.chk {
+		margin: 0 0 0 35%;
+	}
+	.rem {
+		margin: 5% 0 0 10px;
+	}
+}
+
+/*==========================================
+	If the screen size is less than 500px 
+	wide, following styles will be applied.
+ ===========================================*/
+
+@media (max-width:499px) { /* From pixels 0-499, the code is no longer valid for a desktop */
+	.login {
+		width: 300px;
+		height: 282px;
+	}
+	input[type="text"],
+	input[type="password"] {
+		width: 250px;
+		font-size: 15px;
+	}
+	.btn {
+		font-size: 14px;
+		width: 225px;
+		height: 40px;
+		margin: 15% 0 0 7%;
+	}
+	.forget a {
+		margin: 0 0 0 25%;
+	}
+	.chk {
+		margin: 6% 0 0 0%;
+	}
+	.rem {
+		margin: 6% 0 0 5%;
+	}
+}
+
+
+
+
+
